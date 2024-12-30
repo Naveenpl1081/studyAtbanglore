@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            .custom-form {
+                padding: 30px;
+                background-color: #ffffff;
+                border-radius: 8px;
+                box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            }
+    
+            .form-floating {
+                margin-bottom: 15px;
+            }
+    
+            .form-control:focus {
+                border-color: #4CAF50;
+                box-shadow: 0 0 0 0.2rem rgba(76,175,80,0.25);
+            }
+    
+            button[type="submit"] {
+                padding: 12px;
+                transition: all 0.3s ease;
+            }
+    
+            button[type="submit"]:hover {
+                background-color: #45a049;
+            }
+    
+            .success-message {
+                display: none;
+                color: #4CAF50;
+                margin-top: 15px;
+                text-align: center;
+            }
+            .custom-form .form-control.is-invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.invalid-feedback {
+    display: none;
+    color: #dc3545;
+    font-size: 0.875em;
+    margin-top: 0.25rem;
+}
+
+.form-control.is-invalid ~ .invalid-feedback {
+    display: block;
+}
+
+.success-message {
+    display: none;
+    color: #198754;
+    text-align: center;
+    padding: 10px;
+    margin-top: 15px;
+    width: 100%;
+}
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Topic Listing Contact Page</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+                        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/templatemo-topic-listing.css" rel="stylesheet">
+<!--
+
+TemplateMo 590 topic listing
+
+https://templatemo.com/tm-590-topic-listing
+
+-->
+
+    </head>
+    
+    <body class="topics-listing-page" id="top">
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                        <img src="/images/study.png" alt="Study Logo" class="img-fluid" style="width: 40px; height: 40px; margin-right: 10px; border-radius: 5px;">
+                        <span class="fw-bold">STUDY At Bangalore</span>
+                    </a>
+                    <div class="d-lg-none ms-auto me-4">
+                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                    </div>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_1">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_2">Browse Topics</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_3">How it works</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_4">FAQs</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_5">Contact</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="topics-listing.html">Providing Details</a></li>
+
+                                    <li><a class="dropdown-item active" href="contact.html">Contact Form</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="d-none d-lg-block">
+                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+
+            <header class="site-header d-flex flex-column justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-5 col-12">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
+
+                                    <li class="breadcrumb-item active" aria-current="page">Contact Form</li>
+                                </ol>
+                            </nav>
+
+                            <h2 class="text-white">Contact Form</h2>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+
+            <section class="section-padding section-bg">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <h3 class="mb-4 pb-2">We'd love to hear from you</h3>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <form action="https://formspree.io/f/xovvlnej" method="POST" class="custom-form contact-form" role="form" id="contactForm">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-floating">
+                                            <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name" 
+                                                   required pattern="[A-Za-z ]{2,50}" 
+                                                   title="Please enter a valid name (2-50 characters, letters only)">
+                                            <label for="first_name">First Name</label>
+                                            <div class="invalid-feedback">Please enter a valid first name (2-50 characters, letters only)</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-floating">
+                                            <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name" 
+                                                   required pattern="[A-Za-z ]{2,50}"
+                                                   title="Please enter a valid name (2-50 characters, letters only)">
+                                            <label for="last_name">Last Name</label>
+                                            <div class="invalid-feedback">Please enter a valid last name (2-50 characters, letters only)</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-floating">
+                                            <input type="number" name="age" id="age" class="form-control" placeholder="Age" 
+                                                   required min="15" max="100"
+                                                   title="Please enter an age between 15 and 100">
+                                            <label for="age">Age</label>
+                                            <div class="invalid-feedback">Please enter a valid age between 15 and 100</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-floating">
+                                            <input type="text" name="course" id="course" class="form-control" placeholder="Course" 
+                                                   required minlength="2" maxlength="100"
+                                                   title="Please enter a valid course name (2-100 characters)">
+                                            <label for="course">Course</label>
+                                            <div class="invalid-feedback">Please enter a valid course name (2-100 characters)</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-floating">
+                                            <input type="tel" name="phone" id="phone" class="form-control" placeholder="Phone Number" 
+                                                   required pattern="[6-9][0-9]{9}"
+                                                   title="Please enter a valid 10-digit phone number starting with 6-9">
+                                            <label for="phone">Phone Number</label>
+                                            <div class="invalid-feedback">Please enter a valid 10-digit phone number starting with 6-9</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-floating">
+                                            <input type="email" name="email" id="email" class="form-control" placeholder="Email Address" 
+                                                   required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                                   title="Please enter a valid email address">
+                                            <label for="email">Email Address</label>
+                                            <div class="invalid-feedback">Please enter a valid email address</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-floating">
+                                            <input type="text" name="college_name" id="college_name" class="form-control" placeholder="College Name" 
+                                                   required minlength="3" maxlength="100"
+                                                   title="Please enter a valid college name (3-100 characters)">
+                                            <label for="college_name">College Name</label>
+                                            <div class="invalid-feedback">Please enter a valid college name (3-100 characters)</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-12 col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" id="description" name="description" placeholder="Describe your query or additional details" 
+                                                      required minlength="10" maxlength="500"
+                                                      title="Please enter a description (10-500 characters)"></textarea>
+                                            <label for="description">Description</label>
+                                            <div class="invalid-feedback">Please enter a description (minimum 10 characters)</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-4 col-12 ms-auto">
+                                        <button type="submit" class="form-control">Submit</button>
+                                    </div>
+                                    <div class="success-message" id="successMessage">
+                                        Thank you for your submission! We'll get back to you soon.
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col-lg-5 col-12 mx-auto mt-5 mt-lg-0">
+                            <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62232.7761987277!2d77.54165774863283!3d12.872411600000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6b2de06f5c9f%3A0x4397010369a3ae21!2sSilver%20Spring%20Apartment!5e0!3m2!1sen!2sin!4v1735539312933!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                            <h5 class="mt-4 mb-2">Address</h5>
+
+                            <p>#406 Silver spring apartment, Bohra Layout, Joythi Nagar, Near vijayashree hospital, Gottigere, - Bangalore 560083</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-12 mb-4 pb-2">
+                        <a class="navbar-brand mb-2" href="index.html">
+                            <i class="bi-back"></i>
+                            <span>STUDY At <br/>Bangalore</span>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <h6 class="site-footer-title mb-3">Resources</h6>
+
+                        <ul class="site-footer-links">
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Home</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">How it works</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">FAQs</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                        <h6 class="site-footer-title mb-3">Information</h6>
+
+                        <p class="text-white d-flex mb-1">
+                            <a href="tel: 305-240-9671" class="site-footer-link">
+                                +91 81975 42373
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <a href="mailto:info@company.com" class="site-footer-link">
+                                studyatbangalore22@gmail.com
+                            </a>
+                        </p>
+                    </div>
+
+                   
+
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            
+            const form = document.querySelector('.contact-form');
+            const successMessage = document.getElementById('successMessage');
+    
+            form.addEventListener('submit', function(e) {
+                // Additional client-side handling if needed
+                form.addEventListener('formspree-submit-response', function() {
+                    form.reset();
+                    successMessage.style.display = 'block';
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 5000);
+                });
+            });
+            
+
+
+
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+    if (!this.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    
+    this.classList.add('was-validated');
+    
+    // If form is valid, show success message after Formspree submission
+    if (this.checkValidity()) {
+        const successMessage = document.getElementById('successMessage');
+        this.addEventListener('formspree-submit-response', function() {
+            this.reset();
+            this.classList.remove('was-validated');
+            successMessage.style.display = 'block';
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        });
+    }
+});
+
+// Real-time phone number validation
+document.getElementById('phone').addEventListener('input', function(e) {
+    let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+    if (value.length > 10) value = value.slice(0, 10); // Limit to 10 digits
+    e.target.value = value;
+});
+
+// Real-time age validation
+document.getElementById('age').addEventListener('input', function(e) {
+    let value = parseInt(e.target.value);
+    if (value < 15) e.target.value = 15;
+    if (value > 100) e.target.value = 100;
+});
+        </script>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>
