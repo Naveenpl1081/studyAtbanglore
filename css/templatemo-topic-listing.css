@@ -731,7 +731,28 @@ blockquote {
   background-position: center;
   background-size: cover;
   position: relative;
+}.timeline-sections {
+  background-image: url('../images/First-Year-of-College.-Choosing-the-right-college.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
+.timeline-sectionss {
+  background-image: url('../images/1000_F_548053493_6RI9pw9KexTgO1f4B2vgY8oBlAqLDfXo.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.timeline-sectionsss {
+  background-image: url('../images/k-mitch-hodge-1jn6NuW0mG0-unsplash-min-1024x640.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
 
 .timeline-container .vertical-scrollable-timeline {
   list-style-type: none;
