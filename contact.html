@@ -207,7 +207,7 @@ https://templatemo.com/tm-590-topic-listing
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-floating">
                                             <input type="number" name="age" id="age" class="form-control" placeholder="Age" 
-                                                   required min="15" max="100"
+                                                   
                                                    title="Please enter an age between 15 and 100">
                                             <label for="age">Age</label>
                                             <div class="invalid-feedback">Please enter a valid age between 15 and 100</div>
@@ -393,7 +393,6 @@ document.getElementById('phone').addEventListener('input', function(e) {
 // Real-time age validation
 document.getElementById('age').addEventListener('input', function(e) {
     let value = parseInt(e.target.value);
-    if (value < 15) e.target.value = 15;
     if (value > 100) e.target.value = 100;
 });
         </script>
