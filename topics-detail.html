@@ -28,6 +28,217 @@
     margin-top: 10px;
 }
 
+.contact-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    width: 400px;
+}
+
+.contact-form h4 {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form .close-btn {
+    background-color: #dc3545;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Show the contact form */
+.contact-form.show {
+    display: block;
+}
+/* Contact Form Styling */
+.contact-form {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Start with a scale of 0 */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    width: 400px;
+    opacity: 0; /* Initially hidden */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Contact Form Visibility with Animation */
+.contact-form.show {
+    display: block;
+    transform: translate(-50%, -50%) scale(1); /* Scale up to 1 */
+    opacity: 1; /* Make the form visible */
+}
+
+/* Form Container */
+.form-container {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Styling */
+.contact-form h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Close Button Styling */
+.close-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #c82333;
+}
+
+/* Placeholder Styling */
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Contact Form Responsive Design */
+@media (max-width: 500px) {
+    .contact-form {
+        width: 90%;
+    }
+}
+.contact-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+
 
         </style>
         <meta charset="utf-8">
@@ -112,7 +323,7 @@ https://templatemo.com/tm-590-topic-listing
                         </ul>
 
                         <div class="d-none d-lg-block">
-                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                            <a href="/contact.html" class="navbar-icon bi-person smoothscroll"></a>
                         </div>
                     </div>
                 </div>
@@ -151,6 +362,39 @@ https://templatemo.com/tm-590-topic-listing
                     </div>
                 </div>
             </header>
+
+            <button id="contactBtn" class="contact-btn">
+                Contact Us
+            </button>
+            
+
+<!-- Contact Form (Initially Hidden) -->
+<div id="contactForm" class="contact-form">
+    <div class="form-container">
+        <h4>Contact Us</h4>
+        <form action="https://formspree.io/f/xovvlnej" method="POST"  role="form" id="contactForm">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" required placeholder="Write your message here"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+        <button id="closeForm" class="close-btn">Close</button>
+    </div>
+</div>
 
 
             <section class="topics-detail-section section-padding " id="topics-detail">
@@ -361,5 +605,76 @@ https://templatemo.com/tm-590-topic-listing
         <script src="js/jquery.sticky.js"></script>
         <script src="js/custom.js"></script>
 
+
+
+        <script>
+            // Get elements
+const contactBtn = document.getElementById('contactBtn');
+const contactForm = document.getElementById('contactForm');
+const closeForm = document.getElementById('closeForm');
+
+// Show contact form when button is clicked
+contactBtn.addEventListener('click', () => {
+    contactForm.classList.add('show');
+});
+
+// Close the contact form when close button is clicked
+closeForm.addEventListener('click', () => {
+    contactForm.classList.remove('show');
+});
+
+const form = document.querySelector('.contact-form');
+            const successMessage = document.getElementById('successMessage');
+    
+            form.addEventListener('submit', function(e) {
+                // Additional client-side handling if needed
+                form.addEventListener('formspree-submit-response', function() {
+                    form.reset();
+                    successMessage.style.display = 'block';
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 5000);
+                });
+            });
+            
+
+
+
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+    if (!this.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    
+    this.classList.add('was-validated');
+    
+    // If form is valid, show success message after Formspree submission
+    if (this.checkValidity()) {
+        const successMessage = document.getElementById('successMessage');
+        this.addEventListener('formspree-submit-response', function() {
+            this.reset();
+            this.classList.remove('was-validated');
+            successMessage.style.display = 'block';
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        });
+    }
+});
+
+// Real-time phone number validation
+document.getElementById('phone').addEventListener('input', function(e) {
+    let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+    if (value.length > 10) value = value.slice(0, 10); // Limit to 10 digits
+    e.target.value = value;
+});
+
+// Real-time age validation
+document.getElementById('age').addEventListener('input', function(e) {
+    let value = parseInt(e.target.value);
+    if (value > 100) e.target.value = 100;
+});
+
+        </script>
     </body>
 </html>
